@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazification Exercise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .question {
+            margin-bottom: 10px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:active {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Fill-in-the-Blanks Exercise: Nazification of State Society (1933-1936)</h1>
+
+<div id="exercise">
+    <div class="question">
+        1. The rise of the Nazi Party in Germany began with the appointment of <input type="text" id="q1"> as Chancellor in January 1933.
+    </div>
+    <div class="question">
+        2. One of the first steps taken by the Nazis to consolidate power was the <input type="text" id="q2">, which allowed the government to bypass the constitution.
+    </div>
+    <div class="question">
+        3. The <input type="text" id="q3"> was established to coordinate all aspects of German life under Nazi ideology, including education, culture, and the economy.
+    </div>
+    <div class="question">
+        4. The Nazis promoted the concept of <input type="text" id="q4">, emphasizing the superiority of the Aryan race and the need for racial purity.
+    </div>
+    <div class="question">
+        5. In 1934, the Night of the <input type="text" id="q5"> resulted in the purge of potential rivals within the Nazi Party.
+    </div>
+    <div class="question">
+        6. The regime implemented a series of laws known as the <input type="text" id="q6">, which stripped Jews of their civil rights and excluded them from various professions.
+    </div>
+    <div class="question">
+        7. The <input type="text" id="q7"> was a paramilitary organization that helped the Nazis intimidate opponents and enforce their policies.
+    </div>
+    <div class="question">
+        8. Propaganda played a crucial role in the Nazification process, spearheaded by Joseph <input type="text" id="q8">, who controlled the Ministry of Propaganda.
+    </div>
+    <div class="question">
+        9. The Nazis used the media to spread their ideology, with films, posters, and <input type="text" id="q9"> that glorified the regime and demonized its enemies.
+    </div>
+    <div class="question">
+        10. By 1936, the Nazis had effectively transformed Germany into a totalitarian state, where dissent was <input type="text" id="q10"> and conformity was enforced.
+    </div>
+</div>
+
+<button onclick="checkAnswers()">Check Answers</button>
+
+<div id="results"></div>
+
+<script>
+    function checkAnswers() {
+        const answers = [
+            "Adolf Hitler",
+            "Reichstag Fire Decree",
+            "Ministry of Propaganda",
+            "Aryanism",
+            "Long Knives",
+            "Nuremberg Laws",
+            "SA",
+            "Goebbels",
+            "rallies",
+            "suppressed"
+        ];
+
+        let results = "";
+        for (let i = 0; i < answers.length; i++) {
+            const userAnswer = document.getElementById(`q${i + 1}`).value.trim();
+            if (userAnswer === answers[i]) {
+                results += `<p class="correct">Question ${i + 1}: Correct!</p>`;
+            } else {
+                results += `<p class="incorrect">Question ${i + 1}: Incorrect! Correct answer: ${answers[i]}</p>`;
+            }
+        }
+
+        document.getElementById("results").innerHTML = results;
+    }
+</script>
+
+</body>
+</html>
