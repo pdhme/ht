@@ -37,6 +37,10 @@
         button:active {
             background-color: #004494;
         }
+        #results {
+            margin-top: 20px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -45,34 +49,34 @@
 
 <div id="exercise">
     <div class="question">
-        1. The rise of the Nazi Party in Germany began with the appointment of <input type="text" id="q1"> as Chancellor in January 1933.
+        1. Adolf <input type="text" id="q1"> became the leader of Germany in 1933.
     </div>
     <div class="question">
-        2. One of the first steps taken by the Nazis to consolidate power was the <input type="text" id="q2">, which allowed the government to bypass the constitution.
+        2. The Nazis wanted to create a <input type="text" id="q2"> society based on their beliefs.
     </div>
     <div class="question">
-        3. The <input type="text" id="q3"> was established to coordinate all aspects of German life under Nazi ideology, including education, culture, and the economy.
+        3. Many people who opposed the Nazis were sent to <input type="text" id="q3">.
     </div>
     <div class="question">
-        4. The Nazis promoted the concept of <input type="text" id="q4">, emphasizing the superiority of the Aryan race and the need for racial purity.
+        4. The Nazis held large <input type="text" id="q4"> to promote their ideas and gather support.
     </div>
     <div class="question">
-        5. In 1934, the Night of the <input type="text" id="q5"> resulted in the purge of potential rivals within the Nazi Party.
+        5. The <input type="text" id="q5"> was a group that helped the Nazis control the streets.
     </div>
     <div class="question">
-        6. The regime implemented a series of laws known as the <input type="text" id="q6">, which stripped Jews of their civil rights and excluded them from various professions.
+        6. The Nuremberg Laws were created to limit the rights of <input type="text" id="q6"> people.
     </div>
     <div class="question">
-        7. The <input type="text" id="q7"> was a paramilitary organization that helped the Nazis intimidate opponents and enforce their policies.
+        7. The Nazis used <input type="text" id="q7"> to spread their messages through newspapers and films.
     </div>
     <div class="question">
-        8. Propaganda played a crucial role in the Nazification process, spearheaded by Joseph <input type="text" id="q8">, who controlled the Ministry of Propaganda.
+        8. Hitler's book, <input type="text" id="q8">, outlined his ideas and goals for Germany.
     </div>
     <div class="question">
-        9. The Nazis used the media to spread their ideology, with films, posters, and <input type="text" id="q9"> that glorified the regime and demonized its enemies.
+        9. The Nazis aimed to unite all German-speaking people into one <input type="text" id="q9">.
     </div>
     <div class="question">
-        10. By 1936, the Nazis had effectively transformed Germany into a totalitarian state, where dissent was <input type="text" id="q10"> and conformity was enforced.
+        10. Many people were afraid to speak out against the <input type="text" id="q10">.
     </div>
 </div>
 
@@ -83,22 +87,22 @@
 <script>
     function checkAnswers() {
         const answers = [
-            "Adolf Hitler",
-            "Reichstag Fire Decree",
-            "Ministry of Propaganda",
-            "Aryanism",
-            "Long Knives",
-            "Nuremberg Laws",
-            "SA",
-            "Goebbels",
+            "Hitler",
+            "totalitarian",
+            "prisons",
             "rallies",
-            "suppressed"
+            "SA",
+            "Jewish",
+            "propaganda",
+            "Mein Kampf",
+            "nation",
+            "regime"
         ];
 
         let results = "";
         for (let i = 0; i < answers.length; i++) {
             const userAnswer = document.getElementById(`q${i + 1}`).value.trim();
-            if (userAnswer === answers[i]) {
+            if (userAnswer.toLowerCase() === answers[i].toLowerCase()) {
                 results += `<p class="correct">Question ${i + 1}: Correct!</p>`;
             } else {
                 results += `<p class="incorrect">Question ${i + 1}: Incorrect! Correct answer: ${answers[i]}</p>`;
