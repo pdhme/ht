@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nazification of State Society</title>
+    <title>Nazification Exercise</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -45,38 +45,98 @@
 </head>
 <body>
 
-<h1>Fill-in-the-Blanks Exercise: Nazification of State Society (1933-1936)</h1>
+<h1>Multiple Choice Exercise: Nazification of State Society (1933-1936)</h1>
 
 <div id="exercise">
     <div class="question">
-        1. <input type="text" id="q1"> became the leader of Germany in 1933.
+        1. Who became the leader of Germany in 1933?
+        <select id="q1">
+            <option value="">Select an answer</option>
+            <option value="Hitler">Adolf Hitler</option>
+            <option value="Goebbels">Joseph Goebbels</option>
+            <option value="Hindenburg">Paul von Hindenburg</option>
+        </select>
     </div>
     <div class="question">
-        2. The Nazis wanted to create a <input type="text" id="q2"> society based on their beliefs.
+        2. What type of society did the Nazis want to create?
+        <select id="q2">
+            <option value="">Select an answer</option>
+            <option value="democratic">Democratic</option>
+            <option value="totalitarian">Totalitarian</option>
+            <option value="socialist">Socialist</option>
+        </select>
     </div>
     <div class="question">
-        3. Many people who opposed the Nazis were sent to <input type="text" id="q3">.
+        3. Where were many people who opposed the Nazis sent?
+        <select id="q3">
+            <option value="">Select an answer</option>
+            <option value="schools">Schools</option>
+            <option value="prisons">Prisons</option>
+            <option value="hospitals">Hospitals</option>
+        </select>
     </div>
     <div class="question">
-        4. The Nazis held large <input type="text" id="q4"> to promote their ideas and gather support.
+        4. What did the Nazis hold to promote their ideas?
+        <select id="q4">
+            <option value="">Select an answer</option>
+            <option value="rallies">Rallies</option>
+            <option value="debates">Debates</option>
+            <option value="elections">Elections</option>
+        </select>
     </div>
     <div class="question">
-        5. The <input type="text" id="q5"> was a group that helped the Nazis control the streets.
+        5. What was the name of the paramilitary group that helped the Nazis?
+        <select id="q5">
+            <option value="">Select an answer</option>
+            <option value="SA">SA (Sturmabteilung)</option>
+            <option value="SS">SS (Schutzstaffel)</option>
+            <option value="Gestapo">Gestapo</option>
+        </select>
     </div>
     <div class="question">
-        6. The Nuremberg Laws were created to limit the rights of <input type="text" id="q6"> people.
+        6. The Nuremberg Laws limited the rights of which group?
+        <select id="q6">
+            <option value="">Select an answer</option>
+            <option value="Jewish">Jewish</option>
+            <option value="Communist">Communist</option>
+            <option value="Catholic">Catholic</option>
+        </select>
     </div>
     <div class="question">
-        7. The Nazis used <input type="text" id="q7"> to spread their messages through newspapers and films.
+        7. What did the Nazis use to spread their messages?
+        <select id="q7">
+            <option value="">Select an answer</option>
+            <option value="propaganda">Propaganda</option>
+            <option value="books">Books</option>
+            <option value="art">Art</option>
+        </select>
     </div>
     <div class="question">
-        8. Hitler's book, <input type="text" id="q8">, outlined his ideas and goals for Germany.
+        8. What was the name of Hitler's book?
+        <select id="q8">
+            <option value="">Select an answer</option>
+            <option value="Mein Kampf">Mein Kampf</option>
+            <option value="Das Kapital">Das Kapital</option>
+            <option value="The Prince">The Prince</option>
+        </select>
     </div>
     <div class="question">
-        9. The Nazis aimed to unite all German-speaking people into one <input type="text" id="q9">.
+        9. What did the Nazis aim to create?
+        <select id="q9">
+            <option value="">Select an answer</option>
+            <option value="nation">A nation</option>
+            <option value="empire">An empire</option>
+            <option value="union">A union</option>
+        </select>
     </div>
     <div class="question">
-        10. Many people were afraid to speak out against the <input type="text" id="q10">.
+        10. What were many people afraid to do?
+        <select id="q10">
+            <option value="">Select an answer</option>
+            <option value="speak out">Speak out</option>
+            <option value="join">Join</option>
+            <option value="vote">Vote</option>
+        </select>
     </div>
 </div>
 
@@ -87,7 +147,7 @@
 <script>
     function checkAnswers() {
         const answers = [
-            "Adolf Hitler",
+            "Hitler",
             "totalitarian",
             "prisons",
             "rallies",
@@ -96,13 +156,13 @@
             "propaganda",
             "Mein Kampf",
             "nation",
-            "regime"
+            "speak out"
         ];
 
         let results = "";
         for (let i = 0; i < answers.length; i++) {
-            const userAnswer = document.getElementById(`q${i + 1}`).value.trim();
-            if (userAnswer.toLowerCase() === answers[i].toLowerCase()) {
+            const userAnswer = document.getElementById(`q${i + 1}`).value;
+            if (userAnswer === answers[i]) {
                 results += `<p class="correct">Question ${i + 1}: Correct!</p>`;
             } else {
                 results += `<p class="incorrect">Question ${i + 1}: Incorrect! Correct answer: ${answers[i]}</p>`;
